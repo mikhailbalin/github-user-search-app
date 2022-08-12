@@ -22,8 +22,6 @@ npm start
 npm test
 ```
 
-## Notes
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

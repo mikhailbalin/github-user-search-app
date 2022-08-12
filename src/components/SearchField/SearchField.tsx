@@ -23,9 +23,15 @@ export const SearchField = ({
   onSubmit: handleSubmit,
   onChange: handleChange,
 }: SearchFieldProps) => {
+  const [animate, setAnimate] = React.useState(false);
   return (
-    <form onSubmit={handleSubmit}>
-      <Search>
+    <form
+      onSubmit={(e) => {
+        if (!query) setAnimate(true);
+        handleSubmit(e);
+      }}
+    >
+      <Search animate={animate} onAnimationEnd={() => setAnimate(false)}>
         <IconWrapper>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </IconWrapper>

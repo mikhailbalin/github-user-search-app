@@ -6,7 +6,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gen": "graphql-codegen -r dotenv/config --config codegen.yml dotenv_config_path=.env.local"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",

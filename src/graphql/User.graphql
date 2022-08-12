@@ -1,0 +1,14 @@
+query User($login: String!) {
+  user(login: $login) {
+    login
+    name
+    avatarUrl
+    repositories(first: 100) {
+      nodes {
+        name
+        description
+      }
+      totalCount
+    }
+  }
+}

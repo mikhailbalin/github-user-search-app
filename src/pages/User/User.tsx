@@ -53,7 +53,7 @@ export const User = () => {
   const totalCount = user?.repositories.totalCount;
 
   return (
-    <Root>
+    <Root role="root">
       <StyledLink to="/">
         <FontAwesomeIcon icon={faArrowLeft} />
       </StyledLink>

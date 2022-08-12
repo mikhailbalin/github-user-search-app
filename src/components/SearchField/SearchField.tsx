@@ -36,6 +36,7 @@ export const SearchField = ({
             value={query}
             onChange={handleChange}
             autoFocus
+            placeholder="Search"
           />
         </label>
         <ButtonWrapper>

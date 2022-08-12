@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --collectCoverageFrom=!src/tests/**/*",
     "eject": "react-scripts eject",
     "gen": "graphql-codegen -r dotenv/config --config codegen.yml dotenv_config_path=.env.local"
   },
@@ -36,6 +37,7 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "dotenv": "^16.0.1",
+    "msw": "^0.44.2",
     "react-scripts": "^5.0.1",
     "typescript": "^4.7.4"
   },

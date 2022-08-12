@@ -25,6 +25,8 @@ interface SearchResultProps {
 export const SearchResult = ({ result }: SearchResultProps) => {
   const navigate = useNavigate();
 
+  console.log({ result: result.data });
+
   if (result.fetching) {
     return <Message>Loading...</Message>;
   }
@@ -56,7 +58,7 @@ export const SearchResult = ({ result }: SearchResultProps) => {
                   }
                 >
                   <Avatar src={avatarUrl} alt={name ? name : undefined} />
-                  <div>
+                  <div data-testid="user">
                     <Name>{name}</Name>
                     <Login>{login}</Login>
                   </div>
@@ -65,7 +67,7 @@ export const SearchResult = ({ result }: SearchResultProps) => {
             );
           }
 
-          return null;
+          return <div>test</div>;
         })}
       </UserList>
     );

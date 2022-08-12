@@ -25,8 +25,6 @@ interface SearchResultProps {
 export const SearchResult = ({ result }: SearchResultProps) => {
   const navigate = useNavigate();
 
-  console.log({ result: result.data });
-
   if (result.fetching) {
     return <Message>Loading...</Message>;
   }
@@ -40,6 +38,10 @@ export const SearchResult = ({ result }: SearchResultProps) => {
   }
 
   if (result.data) {
+    if (result.data.search.userCount === 0) {
+      return <Message>No users found</Message>;
+    }
+
     return (
       <UserList>
         {result.data.search.edges?.map((edge) => {
@@ -67,7 +69,7 @@ export const SearchResult = ({ result }: SearchResultProps) => {
             );
           }
 
-          return <div>test</div>;
+          return null;
         })}
       </UserList>
     );
